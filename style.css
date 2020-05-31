@@ -1,0 +1,133 @@
+
+/* resetting the defaults and setting the height of the window to be the entire height of the viewport */
+
+body{
+    background-color: #FFF7EE;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    font-family: Helvetica, sans-serif;
+}
+
+/* settign the main container as a flexbox to lay out the header, the footer and the chat area */
+
+.main-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+/* setting the header container as a flexbox container */
+
+.header-container{
+    padding: 0 6px 0 5px;
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    box-shadow: 4px 4px 8px lightgray;
+}
+
+/* styling the images */
+
+.logo{
+    width: 37%;
+}
+
+.tagline{
+    width: 32%;
+    padding-bottom: 5px;
+    margin-left: 60px;;
+}
+
+.social{
+    padding-top: 3px;
+    width: 18px;
+    height: 18px;
+}
+
+/* styling the rest of the header elements */
+
+#cars{
+    font-size: 0.6em;
+    margin: 5px;
+    margin-left: 20px;;
+    width: 90px;
+    text-align: center;
+}
+
+#text{
+    font-size: 1.7em;
+    margin: 0;
+    color: #6CB4FD;
+    align-self: flex-end;
+}
+
+#not-bold-heading{
+    font-weight: 400;
+    font-size: 20px;
+}
+
+/* styling the chat area */
+
+.content{
+    border: 1px solid lightgray;
+    border-radius: 10px 10px 0 0;
+    margin: 0 10px;
+    margin-top: 10px;
+    height: 77vh;
+    justify-self: flex-start;
+    background-color: white;
+}
+
+p{
+    margin: 5px 0;
+}
+
+.dummy{
+    font-size: .7em;
+    font-weight: 700;
+    color: #555555;
+    padding: 0 5px;
+}
+
+.chat{
+    padding: 5px;
+}
+
+/* styling the footer */
+
+.footer{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 10px;
+}
+
+/* the input field */
+
+#add{
+    width: 80vw;
+    margin: 0 4px;
+    height: 10vh;
+    border: 1px solid lightgray; 
+}
+
+/* styling the buttons */
+
+button{
+    background-color: white;
+    border: 1px solid lightgray;
+}
+
+#end{
+    width: 10vw;
+    height: 10.8vh;
+}
+
+#submit{
+    width: 10vw;
+    height: 10.8vh;
+}
+
+.light{
+    color: #6CB4FD;
+}

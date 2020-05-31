@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+
+<!-- 
+the container element which holds the 3 main parts of the layout, the header the chat area and the footer -->
+
+<body class="main-container">
+
+   <!-- the header flexbox container  -->
+
+    <div class="header-container">
+        <div class="logoimages">
+            <img class="logo" src="./images/omegle.png" alt="">
+            <img class="tagline" src="./images/tagline.png" alt="">
+        </div>
+    
+        <div class="social-images">
+            <img class="social" src="./images/instagram.png" alt="">
+            <img class="social" src="./images/twitter.png" alt="">
+            <img class="social" src="./images/facebook.png" alt="">
+            <select id="cars" name="cars">
+                <option value="volvo">select Language</option>
+                <option value="saab">Saab</option>
+                <option value="fiat">Fiat</option>
+                <option value="audi">Audi</option>
+            </select>
+            <h3 id="text">39,000+ <span id="not-bold-heading">online now</span></h3>
+
+        </div>
+    </div>
+
+    <!-- the end of the header flexbox -->
+
+    <!-- start of the chat area -->
+
+    <main class="content"> 
+        <p class="dummy">You're now chatting with a random stranger. say STAND WITH HONG KONG AGAINES THE CCP!</p>
+        <P class="dummy">You both like humor</P>
+        <ul id="chat">
+        </ul>
+    </main>
+
+    <!-- end of the chat area -->
+
+    <!-- the start of the footer flexbox -->
+    
+    <footer class="footer">
+        <button id="end">
+            <div>Send</div>
+            <div class="light">Enter</div>
+        </button>
+        <input type="text" name="" id="add">
+        <button id="submit">
+            <div>Send</div>
+            <div class="light">Enter</div>
+        </button>
+    </footer>
+    
+    <!-- the end of the footer -->
+    <script src="./script.js"></script>
+
+</body>
+</html>
