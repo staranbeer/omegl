@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
     <title>Document</title>
 </head>
@@ -40,9 +41,10 @@ the container element which holds the 3 main parts of the layout, the header the
     <!-- start of the chat area -->
 
     <main class="content"> 
-        <p class="dummy">You're now chatting with a random stranger. say STAND WITH HONG KONG AGAINES THE CCP!</p>
+        <p class="dummy">You're now chatting with a random stranger. say STAND WITH HONG KONG AGAINST THE CCP!</p>
         <P class="dummy">You both like humor</P>
         <ul id="chat">
+            
         </ul>
     </main>
 
@@ -51,12 +53,14 @@ the container element which holds the 3 main parts of the layout, the header the
     <!-- the start of the footer flexbox -->
     
     <footer class="footer">
-        <button id="end">
-            <div>Send</div>
-            <div class="light">Enter</div>
+        <button class="button" id="end">
+            <div>New</div>
+            <div class="light">Esc</div>
         </button>
+        
+        <!-- the input -->
         <input type="text" name="" id="add">
-        <button id="submit">
+        <button id="submit" class="button">
             <div>Send</div>
             <div class="light">Enter</div>
         </button>

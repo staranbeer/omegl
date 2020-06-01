@@ -6,7 +6,7 @@ body{
     margin: 0;
     padding: 0;
     height: 100vh;
-    font-family: Helvetica, sans-serif;
+    font-family: 'Arimo', sans-serif;
 }
 
 /* settign the main container as a flexbox to lay out the header, the footer and the chat area */
@@ -20,7 +20,7 @@ body{
 /* setting the header container as a flexbox container */
 
 .header-container{
-    padding: 0 6px 0 5px;
+    padding: 0 6px 0 10px;
     display: flex;
     justify-content: space-between;
     background-color: white;
@@ -30,17 +30,17 @@ body{
 /* styling the images */
 
 .logo{
-    width: 37%;
+    width: 48%;
 }
 
 .tagline{
-    width: 32%;
+    width: 40%;
     padding-bottom: 5px;
-    margin-left: 60px;;
+    margin-left: 55px;
 }
 
 .social{
-    padding-top: 3px;
+    padding-top: 10px;
     width: 18px;
     height: 18px;
 }
@@ -72,8 +72,9 @@ body{
 .content{
     border: 1px solid lightgray;
     border-radius: 10px 10px 0 0;
-    margin: 0 10px;
+    margin: 0 6px;
     margin-top: 10px;
+    padding-bottom: 30px;
     height: 77vh;
     justify-self: flex-start;
     background-color: white;
@@ -83,15 +84,41 @@ p{
     margin: 5px 0;
 }
 
+/* the text above the chat text */
+
 .dummy{
-    font-size: .7em;
+    font-size: 14px;
     font-weight: 700;
     color: #555555;
     padding: 0 5px;
 }
 
-.chat{
-    padding: 5px;
+/* the chat text */
+
+ul{
+    list-style-type: none;
+    margin: 0;
+}
+
+#chat{
+    font-family: 'Arimo', sans-serif;
+    font-size: 1em;
+    line-height: 1.5em;
+    padding: 3px 8px;
+}
+/* make every odd member red in color and add a content string before it */
+li:nth-child(odd)::before{
+    content: "Stranger: ";
+    color: red;
+    font-weight: 700;
+}
+/* 
+make every even member blue  */
+
+li:nth-child(even)::before{
+    content: "You: ";
+    color: blue;
+    font-weight: 700;
 }
 
 /* styling the footer */
@@ -99,15 +126,15 @@ p{
 .footer{
     display: flex;
     justify-content: space-between;
-    margin: 0 10px;
+    margin: 0 6px;
 }
 
 /* the input field */
 
 #add{
-    width: 80vw;
+    width: 90vw;
     margin: 0 4px;
-    height: 10vh;
+    height: 7.3em;
     border: 1px solid lightgray; 
 }
 
@@ -119,15 +146,120 @@ button{
 }
 
 #end{
-    width: 10vw;
-    height: 10.8vh;
+    flex-basis: 8em;
+    height: 7.6em;
 }
 
 #submit{
-    width: 10vw;
-    height: 10.8vh;
+    flex-basis: 8em;
+    height: 7.6em;
 }
 
 .light{
     color: #6CB4FD;
 }
+
+/* the button that appears when u hit escape */
+
+#newtext{
+    font-size: 12px;
+    font-weight: 700;
+    color: #555555;
+}
+
+#newtext::before{
+    content: "";
+}
+
+#endButton::before{
+    content: "";
+}
+
+/* media queries to handle different breakpoints */
+
+
+@media only screen and (max-width: 750px) {
+    .header-container{
+        align-items: center;
+        height: 7vh;
+        margin-bottom: 0;
+    }
+    .content{
+        margin-top: 0;
+    }
+    .tagline{
+        margin-left: 20px;
+    }
+    .social{
+        display: none;
+        position: absolute;
+    }
+    #text{
+        position: absolute;
+        display: none;
+    }
+    
+    .content{
+        border-radius: 5px 5px 0 0;
+        margin: 0 4px;
+        padding: 15px 0;
+
+    }
+    .footer{
+        margin: 0 4px;
+    }
+    #end{
+        height: 6em;
+        flex-basis: 6em;
+    }
+    #submit{
+        height: 6em;
+        flex-basis: 6em;
+    }
+    #add{
+        height: 5.7em;
+        margin: 0 2px;
+    }
+  }
+
+
+
+@media only screen and (max-width: 475px){
+    .logo{
+        width: 50%;
+    }
+
+}
+
+@media only screen and (max-width: 362px) {
+    #end{
+        height: 4.2em;
+        flex-basis: 4em;
+        font-size: 0.8em;
+        padding: 5px;
+    }
+    #submit{
+        height: 4.2em;
+        flex-basis: 4em;
+        font-size: 0.8em;
+        padding: 5px;
+    }
+    #add{
+        height: 3.7em;
+        margin: 0 2px;
+    }
+    .light{
+        font-size: 0.7em;
+    }
+    .footer{
+        margin: 2px;
+    }
+    .content{
+
+        padding-top: 5px;
+        font-size: 0.6em;
+        padding-bottom: 40px;
+        margin: 3px 2px 0 2px;
+    }
+}
+
